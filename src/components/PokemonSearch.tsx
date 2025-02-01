@@ -20,7 +20,7 @@ export const PokemonSearch: React.FC<Props> = ({ onSelect, side }) => {
   const [diceInterval, setDiceInterval] = useState<NodeJS.Timeout | null>(null);
 
   const { data: pokemonList } = useQuery('pokemon-list', async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000');
     return response.json();
   });
 
